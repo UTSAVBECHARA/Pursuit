@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PilotApplyer — Your career has an agent now</title>
+  <title>Pursuit — Your career has an agent now</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -505,7 +505,7 @@
   <header>
     <a href="#" class="brand">
       <div class="brand-icon">P</div>
-      <span class="brand-title">PilotApplyer</span>
+      <span class="brand-title">Pursuit</span>
       <span class="brand-badge">AUTONOMOUS</span>
     </a>
     <nav>
@@ -514,7 +514,7 @@
       <a href="#sandbox" class="nav-link" onclick="switchTab('sandbox')">ATS Sandbox</a>
       <a href="#tracker" class="nav-link" onclick="switchTab('tracker')">Applications</a>
       <a href="#settings" class="nav-link" onclick="switchTab('settings')">Settings</a>
-      <a href="https://github.com/UTSAVBECHARA/PilotApplyer" target="_blank" class="btn-pill-dark">
+      <a href="https://github.com/UTSAVBECHARA/Pursuit" target="_blank" class="btn-pill-dark">
         <span>GitHub</span>
         <span style="font-size: 11px;">↗</span>
       </a>
@@ -528,7 +528,7 @@
       <div class="hero-content">
         <h1>Your career has<br>an <em>agent</em> now.</h1>
         <p class="subtitle">
-          PilotApplyer finds jobs around what you want next. It reads your resume, scans 50,000+ real-time DuckDB opportunities, explains every match, and navigates company ATS forms while you sleep.
+          Pursuit finds jobs around what you want next. It reads your resume, scans 50,000+ real-time DuckDB opportunities, explains every match, and navigates company ATS forms while you sleep.
         </p>
         <div class="hero-actions">
           <div class="hero-cta-group">
@@ -622,7 +622,7 @@
       <div class="panel-grid-2">
         <div class="box-card">
           <h3>Your Resume & Career Goals</h3>
-          <p class="desc">Paste your technical profile or drop a resume file. PilotApplyer builds an extracted semantic graph of your skills and seniority.</p>
+          <p class="desc">Paste your technical profile or drop a resume file. Pursuit builds an extracted semantic graph of your skills and seniority.</p>
           
           <div class="file-dropzone" onclick="document.getElementById('resumeFileInput').click()">
             <input type="file" id="resumeFileInput" style="display:none;" accept=".pdf,.docx,.txt,.md" onchange="handleFileUpload(event)">
@@ -753,9 +753,9 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>PilotApplyer &bull; Maintained and deployed by <b>Utsav Bechara</b> &bull; Open-source under MIT License</p>
+    <p>Pursuit &bull; Maintained and deployed by <b>Utsav Bechara</b> &bull; Open-source under MIT License</p>
     <p style="margin-top:0.4rem;">
-      <a href="https://github.com/UTSAVBECHARA/PilotApplyer" target="_blank">GitHub Repository</a> &bull;
+      <a href="https://github.com/UTSAVBECHARA/Pursuit" target="_blank">GitHub Repository</a> &bull;
       <a href="architecture.html">Architecture</a> &bull;
       <a href="api-reference.html">REST API</a> &bull;
       <a href="benchmarks.html">Benchmarks</a>
@@ -965,7 +965,7 @@
     function runSandboxSimulation() {
       const url = document.getElementById('sandboxUrl').value;
       const consoleBox = document.getElementById('sandboxConsole');
-      consoleBox.textContent = `[${new Date().toLocaleTimeString()}] Initializing PilotApplyer Headless Engine...\n[${new Date().toLocaleTimeString()}] Connecting to Playwright MCP stdio session...\n[${new Date().toLocaleTimeString()}] Navigating to: ${url}\n`;
+      consoleBox.textContent = `[${new Date().toLocaleTimeString()}] Initializing Pursuit Headless Engine...\n[${new Date().toLocaleTimeString()}] Connecting to Playwright MCP stdio session...\n[${new Date().toLocaleTimeString()}] Navigating to: ${url}\n`;
 
       let detectedAts = "Generic ATS";
       if (url.includes("lever.co")) detectedAts = "Lever";

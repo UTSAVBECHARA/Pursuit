@@ -1,9 +1,9 @@
 services:
-  pilotapplyer:
+  pursuit:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: pilotapplyer
+    container_name: pursuit
     ports:
       - "8000:8000"
     environment:
@@ -11,7 +11,7 @@ services:
       - AIHAWK_DRY_RUN=1
       - ORCAROUTER_API_KEY=${ORCAROUTER_API_KEY:-}
     volumes:
-      - pilotapplyer_data:/app/data
+      - pursuit_data:/app/data
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8000/api/health"]
@@ -20,5 +20,5 @@ services:
       retries: 3
 
 volumes:
-  pilotapplyer_data:
+  pursuit_data:
     driver: local

@@ -1,4 +1,4 @@
-# PilotApplyer Setup & Local Configuration Guide
+# Pursuit Setup & Local Configuration Guide
 
 ## 1. Prerequisites
 
@@ -14,8 +14,8 @@
 
 ### 2.1 Clone the Repository
 ```bash
-git clone https://github.com/UTSAVBECHARA/PilotApplyer.git
-cd PilotApplyer
+git clone https://github.com/UTSAVBECHARA/Pursuit.git
+cd Pursuit
 ```
 
 ### 2.2 Configure Virtual Environment
@@ -72,20 +72,20 @@ Edit `.env` to configure your API keys and execution options:
 
 ---
 
-## 4. Running PilotApplyer Locally
+## 4. Running Pursuit Locally
 
 ### 4.1 CLI & Interactive Terminal UI
 Launch the interactive terminal UI with your resume:
 ```bash
-pilotapplyer path/to/your_resume.pdf
+pursuit path/to/your_resume.pdf
 ```
 Or with Markdown CV:
 ```bash
-pilotapplyer cv.md
+pursuit cv.md
 ```
 
 ### 4.2 Interactive Keyboard Navigation
-Within the PilotApplyer TUI:
+Within the Pursuit TUI:
 - **`j` / `k` or `Down` / `Up`:** Navigate through scored job postings.
 - **`Space`:** Select/deselect individual postings for application.
 - **`a`:** Apply to selected postings.
@@ -98,10 +98,10 @@ Within the PilotApplyer TUI:
 To test form filling without sending actual applications to employers:
 ```powershell
 $env:AIHAWK_DRY_RUN="1"
-pilotapplyer path/to/resume.pdf
+pursuit path/to/resume.pdf
 ```
 On Linux / macOS:
 ```bash
-AIHAWK_DRY_RUN=1 pilotapplyer path/to/resume.pdf
+AIHAWK_DRY_RUN=1 pursuit path/to/resume.pdf
 ```
-PilotApplyer will navigate to the ATS, identify all input fields, generate synthesized answers, verify the submission button, take a confirmation screenshot, and halt safely.
+Pursuit will navigate to the ATS, identify all input fields, generate synthesized answers, verify the submission button, take a confirmation screenshot, and halt safely.

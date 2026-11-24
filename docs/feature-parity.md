@@ -1,12 +1,12 @@
-# PilotApplyer Upstream Feature Parity Report
+# Pursuit Upstream Feature Parity Report
 
-This report provides a comprehensive, verified feature-by-feature comparison between the upstream foundation project (**AIHawk / Jobs_Applier_AI_Agent** by feder-cr) and **PilotApplyer** (maintained by Utsav Bechara).
+This report provides a comprehensive, verified feature-by-feature comparison between the upstream foundation project (**AIHawk / Jobs_Applier_AI_Agent** by feder-cr) and **Pursuit** (maintained by Utsav Bechara).
 
 ---
 
 ## 1. Feature Parity Matrix
 
-| Feature / Subsystem | Upstream Status | PilotApplyer Status | Implementation Source | Notes & Enhancements in PilotApplyer |
+| Feature / Subsystem | Upstream Status | Pursuit Status | Implementation Source | Notes & Enhancements in Pursuit |
 |---|---|---|---|---|
 | **Resume Ingestion & Parsing** | Implemented | **Fully Functional** | `src/aihawk/profile.py` | Supports PDF (`pypdf`), DOCX (`zipfile`/XML), and Markdown/TXT resumes. Extracts candidate contact info and technical background. |
 | **Multi-Facet Search Planning** | Implemented | **Fully Functional** | `src/aihawk/profile.py`, `config.py` | Deconstructs resumes into weighted nodes (skills, roles), contextual arcs (conditional scalers), and geographic filters. |
@@ -22,16 +22,16 @@ This report provides a comprehensive, verified feature-by-feature comparison bet
 | **At-Rest Credential Sealing** | Implemented | **Fully Functional** | `src/aihawk/secret.py`, `store.py` | Sealed symmetric AES encryption for candidate passwords using local `secret.key`. Zero credential leakage. |
 | **Application History & Metrics** | Implemented | **Fully Functional** | `src/aihawk/store.py` | SQLite persistence in `jobs.db` tracking applied URLs, statuses, timestamps, token costs, and screenshot proofs. |
 | **Interactive Terminal UI (TUI)** | Implemented | **Fully Functional** | `src/aihawk/tui.py`, `cli.py` | Rich Textual dashboard with keyboard navigation (`j`/`k`, `Space`, `a`, `d`, `s`, `e`, `q`). |
-| **REST API & Web Service** | Not in Upstream | **Added in PilotApplyer** | `app/server.py`, `api/index.py` | FastAPI backend exposing `/api/health`, `/api/jobs`, `/api/match`, `/api/apply/simulate`, and Swagger UI (`/docs`). |
-| **Interactive SaaS Web Application** | Not in Upstream | **Added in PilotApplyer** | `docs/index.html` | Modern responsive web frontend with live candidate-job matching, ATS simulation, and active job feed. |
-| **Containerization (Docker)** | Not in Upstream | **Added in PilotApplyer** | `Dockerfile`, `docker-compose.yml` | Multi-stage production container with unprivileged user (`appuser`), persistent volumes, and healthchecks. |
-| **Automated CI/CD Workflows** | Basic | **Enhanced in PilotApplyer** | `.github/workflows/` | Multi-platform unit testing (Linux, macOS, Windows across Python 3.11, 3.12, 3.13) + automated GitHub Pages deployment. |
-| **Documentation Suite** | Basic README | **Enhanced in PilotApplyer** | `docs/*.md`, `README.md` | Full technical documentation (Architecture, API Reference, Benchmarks, Setup, Deployment, Security, Testing). |
+| **REST API & Web Service** | Not in Upstream | **Added in Pursuit** | `app/server.py`, `api/index.py` | FastAPI backend exposing `/api/health`, `/api/jobs`, `/api/match`, `/api/apply/simulate`, and Swagger UI (`/docs`). |
+| **Interactive SaaS Web Application** | Not in Upstream | **Added in Pursuit** | `docs/index.html` | Modern responsive web frontend with live candidate-job matching, ATS simulation, and active job feed. |
+| **Containerization (Docker)** | Not in Upstream | **Added in Pursuit** | `Dockerfile`, `docker-compose.yml` | Multi-stage production container with unprivileged user (`appuser`), persistent volumes, and healthchecks. |
+| **Automated CI/CD Workflows** | Basic | **Enhanced in Pursuit** | `.github/workflows/` | Multi-platform unit testing (Linux, macOS, Windows across Python 3.11, 3.12, 3.13) + automated GitHub Pages deployment. |
+| **Documentation Suite** | Basic README | **Enhanced in Pursuit** | `docs/*.md`, `README.md` | Full technical documentation (Architecture, API Reference, Benchmarks, Setup, Deployment, Security, Testing). |
 
 ---
 
 ## 2. Integrity Verification
 - **Upstream Files Preserved:** 100% (42/42 upstream source and test files intact).
 - **Core Functionality Removed:** 0 features removed.
-- **Upstream Open-Source Attribution:** Preserved in [NOTICE](file:///c:/Users/ASUS/OneDrive/Desktop/pilotApplyer/NOTICE) and [LICENSE](file:///c:/Users/ASUS/OneDrive/Desktop/pilotApplyer/LICENSE).
+- **Upstream Open-Source Attribution:** Preserved in [NOTICE](NOTICE) and [LICENSE](LICENSE).
 - **Automated Test Results:** 142/142 tests passing across all supported operating systems.

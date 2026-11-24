@@ -1,8 +1,8 @@
-# PilotApplyer Cloud Deployment & Production Guide
+# Pursuit Cloud Deployment & Production Guide
 
 ## 1. Production Architecture Overview
 
-PilotApplyer is designed for flexible deployment across containerized environments, cloud platforms, and serverless infrastructure:
+Pursuit is designed for flexible deployment across containerized environments, cloud platforms, and serverless infrastructure:
 
 1. **Web Service & REST API Layer:** Fast, asynchronous FastAPI interface exposing endpoints for resume matching, job search, application simulation, and system health checks.
 2. **Analytical Storage Subsystem:** Embedded DuckDB engine with persistent local volume or cloud-synced Parquet dataset cache.
@@ -12,11 +12,11 @@ PilotApplyer is designed for flexible deployment across containerized environmen
 
 ## 2. Docker Containerization
 
-PilotApplyer provides a production-grade multi-stage `Dockerfile` and `docker-compose.yml` for automated deployment on Railway, Render, Fly.io, AWS ECS, or any standard OCI container runtime.
+Pursuit provides a production-grade multi-stage `Dockerfile` and `docker-compose.yml` for automated deployment on Railway, Render, Fly.io, AWS ECS, or any standard OCI container runtime.
 
 ### 2.1 Building the Container Image
 ```bash
-docker build -t pilotapplyer:latest .
+docker build -t pursuit:latest .
 ```
 
 ### 2.2 Running with Docker Compose
@@ -35,7 +35,7 @@ The container starts with:
 
 ### 3.1 Railway / Render (Recommended for Full Agent & Automation)
 Render and Railway provide full background worker and headless browser support:
-1. Connect your GitHub repository: `https://github.com/UTSAVBECHARA/PilotApplyer`.
+1. Connect your GitHub repository: `https://github.com/UTSAVBECHARA/Pursuit`.
 2. Configure **Environment Variables**:
    - `ORCAROUTER_API_KEY`: Your LLM routing API key.
    - `AIHAWK_DRY_RUN`: `1` (Safe trial execution).

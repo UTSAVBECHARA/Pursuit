@@ -1,7 +1,7 @@
-PilotApplyer Notice & Open-Source Attribution
+Pursuit Notice & Open-Source Attribution
 ==============================================
 
-PilotApplyer is an independently maintained, customized, and deployed AI job discovery and automated application platform developed by Utsav Bechara.
+Pursuit is an independently maintained, customized, and deployed AI job discovery and automated application platform developed by Utsav Bechara.
 
 This project incorporates and builds upon the open-source software project AIHawk (Jobs_Applier_AI_Agent), originally created by feder-cr and contributors under the MIT License.
 
@@ -10,7 +10,7 @@ Upstream Project Attribution
 Original Repository: https://github.com/feder-cr/Jobs_Applier_AI_Agent
 Original Copyright: Copyright (c) 2026 feder-cr
 
-PilotApplyer includes or adapts work from the following upstream components:
+Pursuit includes or adapts work from the following upstream components:
 
 1. Search Planner & Decision Engine
    - src/aihawk/profile.py, src/aihawk/database.py

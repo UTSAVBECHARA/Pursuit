@@ -1,4 +1,4 @@
-name: Deploy PilotApplyer to GitHub Pages
+name: Deploy Pursuit to GitHub Pages
 
 on:
   push:

@@ -1,5 +1,5 @@
 # ==============================================================================
-# PilotApplyer Production Dockerfile
+# Pursuit Production Dockerfile
 # ==============================================================================
 FROM python:3.12-slim as base
 

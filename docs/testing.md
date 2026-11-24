@@ -1,8 +1,8 @@
-# PilotApplyer Testing & Quality Assurance Guide
+# Pursuit Testing & Quality Assurance Guide
 
 ## 1. Testing Philosophy & Architecture
 
-PilotApplyer maintains a test suite ensuring regression resistance across:
+Pursuit maintains a test suite ensuring regression resistance across:
 1. **Candidate Profile & Plan Extraction (`test_answers.py`)**: Tests resume ingestion, encrypted credential sealing/unsealing, and YAML import mechanics.
 2. **LLM Scoring & Decision Routing (`test_scoring.py`, `test_scoring_round.py`)**: Verifies batching, token limits, retry strategies, and score computation across `jev-1.14`.
 3. **ATS Plugin Drivers & Web Form Parsing (`test_plugins.py`, `test_liveness.py`)**: Tests 17+ ATS vendors (Workday, Greenhouse, Lever, Ashby, BambooHR) with mocked network layers.

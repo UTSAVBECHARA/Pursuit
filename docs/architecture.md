@@ -1,8 +1,8 @@
-# PilotApplyer System Architecture
+# Pursuit System Architecture
 
 ## 1. Architectural Overview
 
-PilotApplyer is an autonomous, AI-driven job discovery, multi-facet candidate matching, and automated application system. The platform bridges large-scale job market ingestion with local edge intelligence and headless browser automation.
+Pursuit is an autonomous, AI-driven job discovery, multi-facet candidate matching, and automated application system. The platform bridges large-scale job market ingestion with local edge intelligence and headless browser automation.
 
 ```mermaid
 flowchart TD

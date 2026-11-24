@@ -1,4 +1,4 @@
-# PilotApplyer
+# Pursuit
 
 An autonomous, AI-driven job discovery, intelligent candidate-job matching, and automated application platform.
 
@@ -8,7 +8,7 @@ An autonomous, AI-driven job discovery, intelligent candidate-job matching, and 
 
 Applying for software engineering and technical roles in modern hiring markets requires navigating fragmented job aggregators, repetitive ATS application forms (Workday, Greenhouse, Lever, Ashby, BambooHR, etc.), redundant demographic/experience questionnaires, and inconsistent tracking spreadsheets.
 
-**PilotApplyer** resolves this friction by deploying an end-to-end automated platform that:
+**Pursuit** resolves this friction by deploying an end-to-end automated platform that:
 1. **Aggregates and synchronizes** postings across 37+ public job sources and ATS feeds every 5 hours into local, vectorized DuckDB columnar storage.
 2. **Deconstructs candidate resumes** into weighted, multi-facet semantic search plans (technical nodes, contextual arcs, geographic constraints).
 3. **Scores opportunities** against candidate goals using specialized decision classification models (`typesafe/jev-1.14` and `google/gemini-3.5-flash`), producing normalized 1–5 confidence ratings.
@@ -58,7 +58,7 @@ flowchart TD
 sequenceDiagram
     autonumber
     actor Candidate as Candidate
-    participant UI as PilotApplyer Dashboard / TUI
+    participant UI as Pursuit Dashboard / TUI
     participant Core as Search & Profile Engine
     participant LLM as Multi-Model Decision Layer
     participant MCP as Playwright MCP Server
@@ -105,16 +105,16 @@ sequenceDiagram
 
 ## 5. Application Preview
 
-![PilotApplyer Workflow Animation](assets/banner-dark.gif)
+![Pursuit Workflow Animation](assets/banner-dark.gif)
 
-*PilotApplyer autonomously parsing a candidate resume, narrowing millions of postings to optimal matches, scoring alignment, and automating ATS form submissions.*
+*Pursuit autonomously parsing a candidate resume, narrowing millions of postings to optimal matches, scoring alignment, and automating ATS form submissions.*
 
 ---
 
 ## 6. Directory Structure
 
 ```
-PilotApplyer/
+Pursuit/
 ├── .github/
 │   ├── workflows/             # CI test suites, database sync, and deployment
 │   └── ISSUE_TEMPLATE/        # Standardized issue templates
@@ -142,7 +142,7 @@ PilotApplyer/
 ├── scripts/
 │   └── posthog_dashboard.py   # Anonymous metrics and analytics configuration
 ├── src/
-│   └── aihawk/                # Core PilotApplyer package
+│   └── aihawk/                # Core Pursuit package
 │       ├── apply.py           # Browser automation & MCP agent orchestrator
 │       ├── cli.py             # Command-line interface entrypoint
 │       ├── config.py          # Configuration dataclasses and environment flags
@@ -173,8 +173,8 @@ PilotApplyer/
 
 ### 7.1 Clone and Environment Setup
 ```bash
-git clone https://github.com/UTSAVBECHARA/PilotApplyer.git
-cd PilotApplyer
+git clone https://github.com/UTSAVBECHARA/Pursuit.git
+cd Pursuit
 
 python -m venv .venv
 # On Windows:
@@ -198,7 +198,7 @@ PORT=8000
 
 ### 7.3 Run the Interactive Terminal UI
 ```bash
-pilotapplyer path/to/resume.pdf
+pursuit path/to/resume.pdf
 ```
 
 ### 7.4 Run the Web Dashboard & REST API
@@ -213,8 +213,8 @@ Open [http://localhost:8000](http://localhost:8000) to access the interactive we
 
 ### 8.1 Docker Build & Run
 ```bash
-docker build -t pilotapplyer:latest .
-docker run -p 8000:8000 -e ORCAROUTER_API_KEY="your_key" pilotapplyer:latest
+docker build -t pursuit:latest .
+docker run -p 8000:8000 -e ORCAROUTER_API_KEY="your_key" pursuit:latest
 ```
 
 ### 8.2 Docker Compose
@@ -240,7 +240,7 @@ Interactive documentation is available at `/docs` (Swagger UI) and `/redoc` (ReD
 
 ## 10. Testing & Empirical Benchmarks
 
-PilotApplyer includes an extensive test suite verifying mathematical scoring, credential encryption, plugin parsing, and error masking:
+Pursuit includes an extensive test suite verifying mathematical scoring, credential encryption, plugin parsing, and error masking:
 
 ```bash
 # Run full unit and integration test suite

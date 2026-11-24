@@ -1,6 +1,6 @@
-# Contributing to PilotApplyer
+# Contributing to Pursuit
 
-PilotApplyer is an autonomous, AI-driven job discovery, multi-facet candidate matching, and automated application platform. The most useful contribution is a plugin for a job site: a Markdown file that instructs the LLM and browser automation on how that site's application form operates. You can write one by following [docs/plugins.md](docs/plugins.md).
+Pursuit is an autonomous, AI-driven job discovery, multi-facet candidate matching, and automated application platform. The most useful contribution is a plugin for a job site: a Markdown file that instructs the LLM and browser automation on how that site's application form operates. You can write one by following [docs/plugins.md](docs/plugins.md).
 
 For detailed contribution guidelines, code formatting standards, and PR protocols, refer to [docs/contributions.md](docs/contributions.md).
 
@@ -11,8 +11,8 @@ For detailed contribution guidelines, code formatting standards, and PR protocol
 Python 3.11 or newer is required.
 
 ```bash
-git clone https://github.com/UTSAVBECHARA/PilotApplyer.git
-cd PilotApplyer
+git clone https://github.com/UTSAVBECHARA/Pursuit.git
+cd Pursuit
 python -m venv .venv
 # On Windows:
 .\.venv\Scripts\Activate.ps1
@@ -20,12 +20,12 @@ python -m venv .venv
 source .venv/bin/activate
 
 pip install -e ".[dev]"
-pilotapplyer --help
+pursuit --help
 ```
 
-The installation brings in `invisible-playwright-mcp`. Running PilotApplyer in production requires an OrcaRouter or OpenAI-compatible API key. The unit tests require neither: they use comprehensive fakes (`tests/fakes.py`) and make no external network calls.
+The installation brings in `invisible-playwright-mcp`. Running Pursuit in production requires an OrcaRouter or OpenAI-compatible API key. The unit tests require neither: they use comprehensive fakes (`tests/fakes.py`) and make no external network calls.
 
-PilotApplyer maintains user workspace state in `~/.aihawk` or `~/.pilotapplyer` (`%USERPROFILE%\.aihawk` on Windows).
+Pursuit maintains user workspace state in `~/.aihawk` or `~/.pursuit` (`%USERPROFILE%\.aihawk` on Windows).
 
 ---
 

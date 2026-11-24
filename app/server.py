@@ -1,4 +1,4 @@
-"""PilotApplyer Web Service & REST API Server.
+"""Pursuit Web Service & REST API Server.
 
 Provides a unified HTTP and Web UI interface for real-time job discovery,
 intelligent candidate-job matching, and automated dry-run application simulation.
@@ -32,7 +32,7 @@ from aihawk.config import (
 from aihawk.plugins import always_plugins, load_plugins
 
 app = FastAPI(
-    title="PilotApplyer API",
+    title="Pursuit API",
     description="Autonomous AI-powered job discovery, intelligent candidate-job matching, and automated application platform.",
     version="1.0.0",
     docs_url="/docs",
@@ -130,7 +130,7 @@ def health_check() -> dict[str, Any]:
     """Returns platform health status, engine version, and active configuration."""
     return {
         "status": "healthy",
-        "platform": "PilotApplyer",
+        "platform": "Pursuit",
         "version": "1.0.0",
         "environment": "production",
         "dry_run": dry_run() or True,
@@ -152,7 +152,7 @@ def system_stats() -> dict[str, Any]:
     plugins = load_plugins(always_plugins())
     plugin_names = sorted({plugin.name for plugin in plugins if plugin.name})
     return {
-        "platform": "PilotApplyer",
+        "platform": "Pursuit",
         "active_sources": 37,
         "supported_ats_platforms": len(plugin_names),
         "ats_list": plugin_names,
@@ -310,7 +310,7 @@ def simulate_apply(request: SimulateApplyRequest) -> dict[str, Any]:
         "proof_record": {
             "timestamp": "2026-11-24T17:00:00Z",
             "proof_file": f"data/proofs/dry_run_{ats_detected}_{int(asyncio.get_event_loop().time())}.png",
-            "safety_guarantee": "Verified by PilotApplyer Sandbox Engine",
+            "safety_guarantee": "Verified by Pursuit Sandbox Engine",
         },
     }
 
@@ -322,10 +322,10 @@ if not INDEX_HTML_PATH.exists():
 
 @app.get("/", response_class=HTMLResponse)
 def root_ui() -> str:
-    """Renders the comprehensive PilotApplyer editorial dashboard and explorer."""
+    """Renders the comprehensive Pursuit editorial dashboard and explorer."""
     if INDEX_HTML_PATH.exists():
         return INDEX_HTML_PATH.read_text(encoding="utf-8")
-    return "<h1>PilotApplyer Platform</h1><p>Autonomous AI Job Discovery Platform</p>"
+    return "<h1>Pursuit Platform</h1><p>Autonomous AI Job Discovery Platform</p>"
 
 
 def run_server(host: str = "0.0.0.0", port: int = 8000) -> None:

@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "pilotapplyer"
+name = "pursuit"
 description = "An AI-powered job discovery, intelligent candidate-job matching, and automated job application platform."
 readme = "README.md"
 keywords = ["jobs", "job-search", "resume", "job-applications", "browser-automation", "ai-agent", "llm"]
@@ -38,13 +38,13 @@ dependencies = [
 dev = ["pytest>=8", "ruff>=0.6", "pyarrow>=15"]  # pyarrow: the pipeline writes description files with it
 
 [project.scripts]
-pilotapplyer = "aihawk.cli:run"
+pursuit = "aihawk.cli:run"
 aihawk = "aihawk.cli:run"
 
 [project.urls]
-Homepage = "https://github.com/UTSAVBECHARA/PilotApplyer"
-Issues = "https://github.com/UTSAVBECHARA/PilotApplyer/issues"
-Changelog = "https://github.com/UTSAVBECHARA/PilotApplyer/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/UTSAVBECHARA/Pursuit"
+Issues = "https://github.com/UTSAVBECHARA/Pursuit/issues"
+Changelog = "https://github.com/UTSAVBECHARA/Pursuit/blob/main/CHANGELOG.md"
 
 [tool.hatch.version]
 path = "src/aihawk/__init__.py"

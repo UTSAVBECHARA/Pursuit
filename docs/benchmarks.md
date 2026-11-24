@@ -1,4 +1,4 @@
-# PilotApplyer Performance Benchmarks & Empirical Metrics
+# Pursuit Performance Benchmarks & Empirical Metrics
 
 The following metrics reflect verified performance benchmarks and empirical test results obtained on standard hardware and continuous integration pipelines.
 

@@ -1,1 +1,1 @@
-"""PilotApplyer Application Package."""
+"""Pursuit Application Package."""

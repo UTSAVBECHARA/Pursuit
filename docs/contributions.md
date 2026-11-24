@@ -1,6 +1,6 @@
-# Contributing to PilotApplyer
+# Contributing to Pursuit
 
-Thank you for your interest in contributing to PilotApplyer! We welcome bug reports, documentation enhancements, new ATS plugin drivers, and feature suggestions.
+Thank you for your interest in contributing to Pursuit! We welcome bug reports, documentation enhancements, new ATS plugin drivers, and feature suggestions.
 
 ---
 
@@ -9,7 +9,7 @@ Thank you for your interest in contributing to PilotApplyer! We welcome bug repo
 - **Quality:** Ensure all code adheres to project formatting (`ruff check` and `ruff format`).
 - **Tests:** Any bug fix or new ATS plugin must be accompanied by comprehensive tests in `tests/`.
 - **Security:** Never submit credentials, private API keys, or real personal information in issues, test cases, or pull requests.
-- **Attribution:** PilotApplyer honors open-source licensing. Upstream attributions to AIHawk (by feder-cr and contributors) and data contributors (Headcount Labs, OpenStreetMap, Overture Maps, FDE Times) must remain intact.
+- **Attribution:** Pursuit honors open-source licensing. Upstream attributions to AIHawk (by feder-cr and contributors) and data contributors (Headcount Labs, OpenStreetMap, Overture Maps, FDE Times) must remain intact.
 
 ---
 

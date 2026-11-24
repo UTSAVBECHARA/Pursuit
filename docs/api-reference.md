@@ -1,6 +1,6 @@
-# PilotApplyer REST API Reference
+# Pursuit REST API Reference
 
-The PilotApplyer platform includes an OpenAPI-compliant REST API serving real-time job exploration, candidate-job matching, and dry-run application simulation.
+The Pursuit platform includes an OpenAPI-compliant REST API serving real-time job exploration, candidate-job matching, and dry-run application simulation.
 
 Interactive API Documentation:
 - Swagger UI: `/docs`
@@ -19,7 +19,7 @@ Checks backend service availability, database connectivity, and engine version.
 {
   "status": "healthy",
   "version": "1.0.0",
-  "platform": "PilotApplyer",
+  "platform": "Pursuit",
   "database": "connected",
   "dry_run": true
 }

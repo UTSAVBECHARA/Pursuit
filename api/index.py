@@ -1,4 +1,4 @@
-"""Serverless entrypoint for PilotApplyer on Vercel and edge platforms."""
+"""Serverless entrypoint for Pursuit on Vercel and edge platforms."""
 
 from __future__ import annotations
 

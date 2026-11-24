@@ -36,9 +36,9 @@ applied.csv
 
 # Application runtime database and logs
 .aihawk/
-.pilotapplyer/
+.pursuit/
 aihawk.yaml
-pilotapplyer.yaml
+pursuit.yaml
 data/
 browser-profile/
 *.db
