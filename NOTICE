@@ -1,0 +1,28 @@
+PilotApplyer Notice & Open-Source Attribution
+==============================================
+
+PilotApplyer is an independently maintained, customized, and deployed AI job discovery and automated application platform developed by Utsav Bechara.
+
+This project incorporates and builds upon the open-source software project AIHawk (Jobs_Applier_AI_Agent), originally created by feder-cr and contributors under the MIT License.
+
+Upstream Project Attribution
+----------------------------
+Original Repository: https://github.com/feder-cr/Jobs_Applier_AI_Agent
+Original Copyright: Copyright (c) 2026 feder-cr
+
+PilotApplyer includes or adapts work from the following upstream components:
+
+1. Search Planner & Decision Engine
+   - src/aihawk/profile.py, src/aihawk/database.py
+   - The search plan's rules, multi-facet evaluation, and rarity weighting adapt the planner architecture of the upstream author's job-search engine.
+
+2. Job Database & Ingestion Pipeline
+   - pipeline/build.py, pipeline/publish.py, src/aihawk/library.py
+   - Merged from public ATS feeds and datasets named in pipeline/build.py and docs/data-sources.md.
+   - Job data from Headcount Labs (https://headcountlabs.com), licensed under ODbL 1.0, with geospatial location data from OpenStreetMap contributors (ODbL) and Overture Maps.
+   - Forward Deployed Engineer postings from FDE Times, licensed under CC BY 4.0.
+   - Each job posting remains the intellectual property of its respective employer and links back to original listings.
+
+3. Browser Automation & Model Context Protocol (MCP)
+   - src/aihawk/apply.py
+   - Driven via invisible-playwright-mcp and Playwright browser automation engines.

@@ -1,0 +1,24 @@
+services:
+  pilotapplyer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pilotapplyer
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+      - AIHAWK_DRY_RUN=1
+      - ORCAROUTER_API_KEY=${ORCAROUTER_API_KEY:-}
+    volumes:
+      - pilotapplyer_data:/app/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+volumes:
+  pilotapplyer_data:
+    driver: local

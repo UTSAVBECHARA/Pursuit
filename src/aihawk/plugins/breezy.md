@@ -1,0 +1,20 @@
+---
+name: breezy
+hosts: [breezy.hr]
+apply_path: /apply
+---
+The page follows the browser's language, so labels may not be in English: go by the field's name.
+
+Fields are named `cName`, `cEmail` and `cPhoneNumber`, which is one text field with no country list. `cAddress` and a desired salary, with its currency and period beside it, may be required. Some forms also have `cSummary` for a summary of experience and `cCoverLetter`. A required summary may be written only from the CV's own words. Leave `smsConsent` unticked unless the answers file says otherwise. Do not use the Indeed or LinkedIn links.
+
+The CV goes to `a.resume`, the link labelled "Carica Curriculum" in Italian, and the page then shows "Allegato" beside it. Uploading fills `cSummary` from the CV's own words. The upload is a link, "Carica Curriculum" on an Italian page and "Attached" once a file is in place, near the top, with no file input and no id: select it by that text. It carries a "Required" mark when the CV is required. Uploading may fill fields from the CV, so read the page again afterwards and correct them.
+
+"Aggiungi posizione" (add position) and "Aggiungi Studi e formazione" (add education) are links that add an entry: leave them empty unless required.
+
+Questions a company adds have names like `section_..._question_0`, as radio buttons, native select lists or text: find each by the text before it. Some forms ask many required questions about licences or experience. Answer each from the CV and the answers.
+
+Race, gender and veteran questions (`race_ethnicity`, `gender`, `eeoc.veteran_status`) have an "unspecified" choice: pick that. Their ids do not match their labels (`#race_hispanic` is labelled "asian"), so choose by the label, not the id.
+
+The send control is the form's last button, labelled "Invia candidatura" on an Italian page. On some forms it is `button[type='submit']`; on others it is `type='button'`, and `button[type='button']` then matches several buttons, the first of them hidden: seen on a real form, where the click went to a hidden button and nothing was sent. Name it by its text.
+
+After sending: the page says "Application Submitted" and "Your application has been submitted successfully. Good luck!", at an address ending in `/apply/submitted`. Read the page: the form still on the page with no error on it is not a confirmation but unknown, as a send can take seconds to leave it; only a validation error or a failure message means rejected.

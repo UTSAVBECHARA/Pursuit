@@ -1,0 +1,57 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Caches and virtual environments
+.venv/
+venv/
+env/
+ENV/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# Environment files and credentials
+.env
+.env.*
+!.env.example
+key
+*.key
+*.pem
+
+# Personal data, resumes, and user artifacts
+*.pdf
+*.docx
+*.doc
+cv.md
+answers.yaml
+answers.yaml.imported
+applied.csv
+
+# Application runtime database and logs
+.aihawk/
+.pilotapplyer/
+aihawk.yaml
+pilotapplyer.yaml
+data/
+browser-profile/
+*.db
+*.sqlite
+*.sqlite3
+*.log
+server.log
+errors.log
+trace.log
+
+# Operating system & Editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
