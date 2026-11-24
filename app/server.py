@@ -29,7 +29,6 @@ from aihawk.config import (
     DEFAULT_QUICK_MODEL,
     dry_run,
 )
-from aihawk.liveness import posting_is_closed
 from aihawk.plugins import always_plugins, load_plugins
 
 app = FastAPI(

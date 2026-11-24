@@ -61,4 +61,7 @@ markers = [
 
 [tool.ruff]
 line-length = 160
-src = ["src", "tests"]
+src = ["src", "tests", "app", "api"]
+
+[tool.ruff.lint]
+ignore = ["EXE001"]
